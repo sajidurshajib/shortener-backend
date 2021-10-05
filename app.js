@@ -1,5 +1,6 @@
 const express = require('express')
 const morgan = require('morgan')
+const linkRoutes = require('./routes/linkRoutes')
 
 //express
 const app = express()
@@ -11,10 +12,15 @@ if (process.env.NODE_ENV === 'development') {
     app.use(morgan('dev'))
 }
 
-//route
+//main route
 app.get('/', (req, res) => {
-    res.send('Hello world')
+    res.json({
+        msg: 'Server runningg',
+    })
 })
+
+//route
+app.use('/api/link', linkRoutes)
 
 //export
 module.exports = app
