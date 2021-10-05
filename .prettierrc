@@ -4,7 +4,10 @@
     "singleQuote": true,
     "arrowParens": "always",
     "jsxBracketSameLine": true,
-    "printWidth": 120,
+    "printWidth": 60,
     "importOrderSeparation": false,
-    "experimentalBabelParserPluginsList": ["jsx", "typescript"]
+    "experimentalBabelParserPluginsList": [
+        "jsx",
+        "typescript"
+    ]
 }
