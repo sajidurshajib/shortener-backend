@@ -1,10 +1,11 @@
 const express = require('express')
+const linkController = require('../controllers/linkControllers')
 
 const router = express.Router()
 
 router
     .route('/')
-    .get((req, res) => res.json({ msg: 'Link get route' }))
+    .get(linkController.allLink)
     .post((req, res) => res.json({ msg: 'Link post route' }))
 router
     .route('/:id')
