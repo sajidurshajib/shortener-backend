@@ -1,5 +1,6 @@
 const express = require('express')
 const linkController = require('../controllers/linkControllers')
+const linkDto = require('../dto/linkDto')
 
 const router = express.Router()
 
@@ -11,7 +12,7 @@ router.param('id', (req, res, next, val) => {
 router
     .route('/')
     .get(linkController.allLink)
-    .post((req, res) => res.json({ msg: 'Link post route' }))
+    .post(linkDto.linkPostDto, linkController.postLink)
 router
     .route('/:id')
     .get((req, res) => res.json({ msg: 'Link id get route' }))

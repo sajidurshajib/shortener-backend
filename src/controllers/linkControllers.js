@@ -4,3 +4,10 @@ exports.allLink = (req, res) => {
         status: 'Success',
     })
 }
+
+//Post controller
+exports.postLink = (req, res) => {
+    res.status(200).json({
+        status: 'Success',
+    })
+}
