@@ -4,7 +4,7 @@
     "singleQuote": true,
     "arrowParens": "always",
     "jsxBracketSameLine": true,
-    "printWidth": 60,
+    "printWidth": 70,
     "importOrderSeparation": false,
     "experimentalBabelParserPluginsList": [
         "jsx",
